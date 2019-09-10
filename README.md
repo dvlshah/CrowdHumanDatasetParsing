@@ -7,7 +7,7 @@ python parseDataset.py --annFile annotation_train.odgt --debug 0
 Flags 
 
 1. annFile = path to annotation file
-2. debug   = flag (0 or 1) to display bbox on five random images from dataset.
+2. debug   = flag (0 or 1) to display bounding box on five random images from dataset.
 
 [Crowd Human Dataset Website](https://www.crowdhuman.org/)
 
