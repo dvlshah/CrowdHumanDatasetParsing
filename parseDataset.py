@@ -147,16 +147,16 @@ def drawOnImage(img,box):
     xmax = visible_box[0] + visible_box[2]
     ymax = visible_box[1] + visible_box[3]
 
-    if unsure == 0:
-        cv2.rectangle(img, (xmin,ymin),(xmax,ymax), (0,255,0), 1)
+    #if unsure == 0:
+    cv2.rectangle(img, (xmin,ymin),(xmax,ymax), (0,255,0), 1)
     
     xmin = head_box[0]
     ymin = head_box[1]
     xmax = head_box[0] + head_box[2]
     ymax = head_box[1] + head_box[3]
     
-    if h_ignore == 0:
-        cv2.rectangle(img, (xmin,ymin),(xmax,ymax), (255,0,0), 1)
+    #if h_ignore == 0:
+    cv2.rectangle(img, (xmin,ymin),(xmax,ymax), (255,0,0), 1)
 
     return img
 
@@ -210,13 +210,13 @@ def debug(data):
         img              = cv2.imread(img_path)
         height, width, _ = img.shape
         
-        if height > 960: new_height = 960
-        if width  > 1280: new_width = 1280
+        if height > 960: height = 960
+        if width  > 1280: width = 1280
 
         for box in image_info:
             display(box)
             img  = drawOnImage(img,box)
-        img = cv2.resize(img, (new_width, new_height))
+        img = cv2.resize(img, (width, height))
         cv2.imshow("No of Boxes "+str(len(image_info)),img)
         cv2.waitKey(0)
         cv2.destroyAllWindows()
