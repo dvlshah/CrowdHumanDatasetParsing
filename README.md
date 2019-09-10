@@ -1,4 +1,4 @@
-# CrowdHumanDatasetParsing
+# CrowdHuman Dataset Parsing
 This repo contains script to read the crowd human dataset in a structured format
 
 ```
