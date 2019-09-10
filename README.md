@@ -1,6 +1,7 @@
 # CrowdHuman Dataset Parsing
 This repo contains script to read the crowd human dataset in a structured format
 
+# Getting Started
 ```
 python parseDataset.py --annFile annotation_train.odgt --debug 0
 ```
@@ -16,3 +17,7 @@ The dataset download link is mentioned in the website mentioned below.
 [Crowd Human Dataset Website](https://www.crowdhuman.org/)
 
 [Crowd Human Dataset Paper Link](https://arxiv.org/pdf/1805.00123.pdf)
+
+## Requirements
+
+1. OpenCV : ```pip install opencv-python```
