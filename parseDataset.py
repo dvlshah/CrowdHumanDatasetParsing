@@ -8,6 +8,8 @@ import argparse
 import random
 import cv2
 
+dataset_dir = ""
+
 """
 Function to read file in a list
 @param : filename
@@ -178,9 +180,9 @@ The train and test annotations file has paths from all dirs
     image_path : path of image
 """
 def check_image_path(image_path):
-    train_01 = "CrowdHuman_train01"
-    train_02 = "CrowdHuman_train02"
-    train_03 = "CrowdHuman_train03"
+    train_01 = dataset_dir+"/CrowdHuman_train01"
+    train_02 = dataset_dir+"/CrowdHuman_train02"
+    train_03 = dataset_dir+"/CrowdHuman_train03"
     
     image_path_1 = train_01+"/"+image_path
     image_path_2 = train_02+"/"+image_path
@@ -225,15 +227,22 @@ def parse_args():
     parser = argparse.ArgumentParser(description='CrowdHumanDatasetParsing')
     parser.add_argument('--annFile' ,type=str,
                         help='Annotation file name')
+    parser.add_argument('--datasetDir', type=str,
+                        help='Dataset directory')
     parser.add_argument('--debug', type=int,
                         help='Debug mode')
     args = parser.parse_args()
     return args
 
 def main():
-    args     = parse_args()
+    args        = parse_args()
+    
+    global dataset_dir
+    dataset_dir = args.datasetDir
+    
     #Read annotation file
     fcontent = read_file(args.annFile)
+    
     #Get all image bbox information
     dataInfo = getImageData(fcontent)
     
