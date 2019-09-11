@@ -3,13 +3,31 @@ This repo contains script to read the crowd human dataset in a structured format
 
 # Getting Started
 ```
-python parseDataset.py --annFile annotation_train.odgt --debug 0
-```
-Flags 
+python3 parseDataset.py --config_file_path=./config.txt --data test
 
-1. annFile     = path to annotation file
-2. datasetDir  = path to directory of dataset
-3. debug       = flag (0 or 1) to display bounding box on five random images from dataset.
+```
+How to define config file for your requirements 
+
+[dataset]
+dataset_base_dir            path to directory where dataset folders are present after downloading
+train_annotation_file_path  path to train annotation file
+test_annotation_file_path   path to test annotation file
+
+
+[box_attributes]
+visible=1   will allow visible bbox. 
+full=1      will allow full box.
+head=1      will allow head box
+occ=1       will allow occluded bboxes
+unsure=0    will not allow unsure bboxes
+h_ignore=0  will not allow ignored region bboxes
+h_occ=0     will not allow occluded heads
+h_unsure=0  will not allow unsure head bboxes
+tag=person  will allow only bboxes with tag of person (other is mask)
+
+[test]
+debug=1     to debug by plotting bbox on below mentioned 'num_image' random images
+num_images=5
 
 The dataset download link is mentioned in the website mentioned below.
 
