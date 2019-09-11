@@ -8,13 +8,14 @@ python3 parseDataset.py --config_file_path=./config.txt --data test
 ```
 How to define config file for your requirements 
 
-[dataset]
-dataset_base_dir            path to directory where dataset folders are present after downloading
-train_annotation_file_path  path to train annotation file
-test_annotation_file_path   path to test annotation file
+[dataset] <br />
+dataset_base_dir            path to directory where dataset folders are present after downloading <br />
+train_annotation_file_path  path to train annotation file <br />
+test_annotation_file_path   path to test annotation file <br />
 
+<br />
 
-[box_attributes]
+[box_attributes] <br />
 visible=1   will allow visible bbox. <br />
 full=1      will allow full box. <br />
 head=1      will allow head box <br />
@@ -25,9 +26,11 @@ h_occ=0     will not allow occluded heads. <br />
 h_unsure=0  will not allow unsure head bboxes. <br />
 tag=person  will allow only bboxes with tag of person (other is mask). <br />
 
+<br />
+
 [test]
-debug=1     to debug by plotting bbox on below mentioned 'num_image' random images
-num_images=5
+debug=1     to debug by plotting bbox on below mentioned 'num_image' random images <br />
+num_images=5 <br />
 
 The dataset download link is mentioned in the website mentioned below.
 
