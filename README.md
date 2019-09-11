@@ -16,14 +16,14 @@ test_annotation_file_path   path to test annotation file
 
 [box_attributes]
 visible=1   will allow visible bbox. <br />
-full=1      will allow full box.
-head=1      will allow head box
-occ=1       will allow occluded bboxes
-unsure=0    will not allow unsure bboxes
-h_ignore=0  will not allow ignored region bboxes
-h_occ=0     will not allow occluded heads
-h_unsure=0  will not allow unsure head bboxes
-tag=person  will allow only bboxes with tag of person (other is mask)
+full=1      will allow full box. <br />
+head=1      will allow head box <br />
+occ=1       will allow occluded bboxes. <br />
+unsure=0    will not allow unsure bboxes. <br />
+h_ignore=0  will not allow ignored region bboxes. <br />
+h_occ=0     will not allow occluded heads. <br />
+h_unsure=0  will not allow unsure head bboxes. <br />
+tag=person  will allow only bboxes with tag of person (other is mask). <br />
 
 [test]
 debug=1     to debug by plotting bbox on below mentioned 'num_image' random images
