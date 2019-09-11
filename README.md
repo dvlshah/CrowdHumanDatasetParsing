@@ -28,7 +28,7 @@ tag=person  will allow only bboxes with tag of person (other is mask). <br />
 
 <br />
 
-[test]
+[test] <br />
 debug=1     to debug by plotting bbox on below mentioned 'num_image' random images <br />
 num_images=5 <br />
 
