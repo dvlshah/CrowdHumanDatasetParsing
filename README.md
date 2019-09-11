@@ -15,7 +15,7 @@ test_annotation_file_path   path to test annotation file
 
 
 [box_attributes]
-visible=1   will allow visible bbox. 
+visible=1   will allow visible bbox. <br />
 full=1      will allow full box.
 head=1      will allow head box
 occ=1       will allow occluded bboxes
