@@ -6,7 +6,7 @@ This repo contains script to read the crowd human dataset in a structured format
 python3 parseDataset.py --config_file_path=./config.txt --data test
 
 ```
-How to define config file for your requirements 
+# How to define config file for your requirements 
 
 [dataset] <br />
 dataset_base_dir            path to directory where dataset folders are present after downloading <br />
